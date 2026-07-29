@@ -16,31 +16,11 @@ const cases = [
     icon:'⚡', tool:'Power Apps',
     title:'Digitalização de inspeções de campo',
     desc:'Substituição de checklists em papel por um app móvel que registra inspeções, fotos e assinaturas em tempo real, com dados sincronizados automaticamente para dashboards.',
-    metrics:[
-      { num:'−70%', label:'Tempo de registro' },
-      { num:'100%', label:'Dados digitais' },
-      { num:'0', label:'Papel utilizado' },
-    ]
-  },
-  {
-    icon:'🖥️', tool:'PI Vision',
-    title:'Dashboard de saúde de ativos em tempo real',
-    desc:'Desenvolvimento de telas operacionais no PI Vision para o time de Confiabilidade monitorar a saúde dos equipamentos em tempo real. Os displays consolidam variáveis de condição (vibração, temperatura de mancais, corrente de motor) com limites de alarme e indicadores de tendência, permitindo transição de manutenção reativa para preditiva (condition-based monitoring).',
-    metrics:[
-      { num:'24/7', label:'Monitoramento contínuo' },
-      { num:'↑', label:'Detecção precoce de falhas' },
-      { num:'−↓', label:'Paradas não planejadas' },
-    ]
   },
   {
     icon:'📈', tool:'Seeq',
     title:'Otimização de coluna de destilação via EDA',
-    desc:'Análise exploratória de dados (EDA) sobre séries temporais das variáveis de processo que governam a destilação — perfis de temperatura de pratos, razão de refluxo, pressão de topo e vazões de carga. Foram identificados padrões e correlações entre variáveis manipuladas e a qualidade de produto, revelando janelas operacionais ótimas e reduzindo variabilidade do processo para maximizar pureza e eficiência energética.',
-    metrics:[
-      { num:'↑', label:'Pureza do produto' },
-      { num:'−↓', label:'Consumo energético' },
-      { num:'↓', label:'Variabilidade de processo' },
-    ]
+    desc:'Análise exploratória de dados (EDA) sobre séries temporais das variáveis de processo que governam a destilação. Foram identificados padrões e correlações entre variáveis manipuladas e a qualidade de produto, revelando janelas operacionais ótimas e reduzindo a variabilidade do processo para maximizar pureza e eficiência energética.',
   },
 ];
 
@@ -63,9 +43,11 @@ function render(){
       <h3>${t.name}</h3>
       <p class="card-desc">${t.desc}</p>
       <span class="badge ${t.level}">${t.level}</span>
-      ${t.available
-        ? `<a class="card-link" href="${t.link}">Acessar trilha →</a>`
-        : `<span class="soon-tag">🔜 Em breve</span>`}
+      <div class="card-foot">
+        ${t.available
+          ? `<a class="card-link" href="${t.link}">Acessar trilha →</a>`
+          : `<span class="soon-tag">Em breve</span>`}
+      </div>
     </article>`).join('');
   emptyState.hidden = list.length !== 0;
 }
@@ -94,9 +76,6 @@ document.getElementById('casesList').innerHTML = cases.map(c => `
       </div>
     </div>
     <p class="case-desc">${c.desc}</p>
-    <div class="case-metrics">
-      ${c.metrics.map(m => `<div class="metric"><span class="metric-num">${m.num}</span><span class="metric-label">${m.label}</span></div>`).join('')}
-    </div>
   </article>`).join('');
 
 // Tema
@@ -121,9 +100,6 @@ function animateCounters(){
     tick();
   });
 }
-
-render();
-animateCounters();
 
 render();
 animateCounters();
