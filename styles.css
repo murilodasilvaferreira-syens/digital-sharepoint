@@ -104,8 +104,12 @@ h1,h2,h3,.brand-name{font-family:'Sora',sans-serif}
 .card{
   background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
   padding:26px;position:relative;overflow:hidden;
+  display:flex;flex-direction:column;min-height:230px;
   transition:transform .3s,box-shadow .3s,border-color .3s;animation:rise .5s ease both;
 }
+.card-foot{margin-top:auto;display:flex;justify-content:flex-end;padding-top:16px}
+.card-foot .card-link{margin-top:0}
+.card-foot .soon-tag{margin-top:0}
 .card::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent,var(--orange-soft));opacity:0;transition:opacity .3s}
 .card:hover{transform:translateY(-8px);box-shadow:var(--shadow);border-color:var(--orange)}
 .card:hover::before{opacity:1}
