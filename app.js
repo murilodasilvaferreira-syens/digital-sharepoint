@@ -22,6 +22,26 @@ const cases = [
       { num:'0', label:'Papel utilizado' },
     ]
   },
+  {
+    icon:'🖥️', tool:'PI Vision',
+    title:'Dashboard de saúde de ativos em tempo real',
+    desc:'Desenvolvimento de telas operacionais no PI Vision para o time de Confiabilidade monitorar a saúde dos equipamentos em tempo real. Os displays consolidam variáveis de condição (vibração, temperatura de mancais, corrente de motor) com limites de alarme e indicadores de tendência, permitindo transição de manutenção reativa para preditiva (condition-based monitoring).',
+    metrics:[
+      { num:'24/7', label:'Monitoramento contínuo' },
+      { num:'↑', label:'Detecção precoce de falhas' },
+      { num:'−↓', label:'Paradas não planejadas' },
+    ]
+  },
+  {
+    icon:'📈', tool:'Seeq',
+    title:'Otimização de coluna de destilação via EDA',
+    desc:'Análise exploratória de dados (EDA) sobre séries temporais das variáveis de processo que governam a destilação — perfis de temperatura de pratos, razão de refluxo, pressão de topo e vazões de carga. Foram identificados padrões e correlações entre variáveis manipuladas e a qualidade de produto, revelando janelas operacionais ótimas e reduzindo variabilidade do processo para maximizar pureza e eficiência energética.',
+    metrics:[
+      { num:'↑', label:'Pureza do produto' },
+      { num:'−↓', label:'Consumo energético' },
+      { num:'↓', label:'Variabilidade de processo' },
+    ]
+  },
 ];
 
 const grid = document.getElementById('cardsGrid');
@@ -101,6 +121,9 @@ function animateCounters(){
     tick();
   });
 }
+
+render();
+animateCounters();
 
 render();
 animateCounters();
