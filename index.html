@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Academia Digital · Treinamentos de Ferramentas</title>
+  <title>Academia Digital · Syensqo Brazil</title>
   <meta name="description" content="Trilhas de treinamento em ferramentas digitais: Power Apps, Seeq, PI Vision e mais." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,12 +22,13 @@
   <header class="header">
     <div class="brand">
       <span class="brand-mark">◆</span>
-      <span class="brand-name">Academia <strong>Digital</strong></span>
+      <span class="brand-name">Academia <strong>Digital</strong> · Syensqo Brazil</span>
     </div>
     <nav class="nav">
       <a href="#trilhas">Trilhas</a>
       <a href="#recursos">Recursos</a>
-      <a href="#agenda">Agenda</a>
+      <a href="#curiosidade">Curiosidade</a>
+      <a href="#cases">Casos de sucesso</a>
     </nav>
     <button id="themeToggle" class="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
       <span class="theme-icon">🌙</span>
@@ -37,12 +38,12 @@
   <!-- Hero -->
   <section class="hero">
     <div class="hero-content">
-      <span class="eyebrow">Transformação Digital</span>
+      <span class="eyebrow">Transformação Digital · Syensqo Brazil</span>
       <h1 class="hero-title">Capacite-se nas ferramentas que transformam <span class="grad">dados em decisões</span>.</h1>
       <p class="hero-sub">Trilhas de aprendizado práticas em Power Apps, Seeq, PI Vision e outras ferramentas que aceleram a inovação no dia a dia.</p>
       <div class="hero-actions">
         <a href="#trilhas" class="btn btn-primary">Explorar trilhas</a>
-        <a href="#agenda" class="btn btn-ghost">Próximas turmas</a>
+        <a href="#cases" class="btn btn-ghost">Casos de sucesso</a>
       </div>
       <div class="stats">
         <div class="stat"><span class="stat-num" data-count="320">0</span><span class="stat-label">Pessoas treinadas</span></div>
@@ -56,7 +57,7 @@
   <section id="trilhas" class="section">
     <div class="section-head">
       <h2>Trilhas de aprendizado</h2>
-      <p>Escolha uma ferramenta e evolua do básico ao avançado.</p>
+      <p>Escolha uma ferramenta e evolua no seu ritmo.</p>
     </div>
 
     <div class="toolbar">
@@ -90,17 +91,43 @@
     </div>
   </section>
 
-  <!-- Agenda -->
-  <section id="agenda" class="section">
+  <!-- Curiosidade da semana -->
+  <section id="curiosidade" class="section">
     <div class="section-head">
-      <h2>Próximas turmas</h2>
-      <p>Treinamentos ao vivo agendados.</p>
+      <h2>Curiosidade da semana</h2>
+      <p>Um insight técnico para expandir seu conhecimento em IA.</p>
     </div>
-    <div class="agenda" id="agendaList"><!-- injetado via JS --></div>
+    <div class="curio">
+      <div class="curio-badge">🧠 Inteligência Artificial</div>
+      <h3 class="curio-title">RAG: como dar "memória" e contexto a modelos de IA</h3>
+      <p class="curio-text">
+        <strong>RAG (Retrieval-Augmented Generation)</strong> é uma técnica que conecta um modelo de linguagem (LLM)
+        a uma base de conhecimento externa. Em vez de depender só do que o modelo "aprendeu" no treinamento,
+        o sistema primeiro <strong>busca (retrieval)</strong> trechos relevantes de documentos — usando
+        <em>embeddings</em> e um banco de dados vetorial — e injeta esse contexto no prompt antes de
+        <strong>gerar (generation)</strong> a resposta.
+      </p>
+      <p class="curio-text">
+        Na prática, isso reduz "alucinações", mantém as respostas atualizadas sem re-treinar o modelo e
+        permite que a IA responda com base nos <strong>seus próprios dados</strong> (procedimentos, manuais,
+        históricos de processo). É a base de assistentes internos que respondem sobre documentação técnica
+        da empresa. 💡
+      </p>
+      <span class="curio-tip">Dica: combine RAG com dados de processo (ex.: PI System) para criar assistentes que explicam desvios operacionais em linguagem natural.</span>
+    </div>
+  </section>
+
+  <!-- Casos de sucesso -->
+  <section id="cases" class="section">
+    <div class="section-head">
+      <h2>Casos de sucesso em digitalização</h2>
+      <p>Histórias reais de como a transformação digital gerou impacto.</p>
+    </div>
+    <div class="cases" id="casesList"><!-- injetado via JS --></div>
   </section>
 
   <footer class="footer">
-    <p>Academia Digital · Transformação Digital · Feito com 🧡 para inovar</p>
+    <p>Academia Digital · Syensqo Brazil · Feito com 🧡 para inovar</p>
   </footer>
 
   <script src="app.js"></script>
