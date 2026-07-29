@@ -99,21 +99,21 @@
     </div>
     <div class="curio">
       <div class="curio-badge">🧠 Inteligência Artificial</div>
-      <h3 class="curio-title">RAG: como dar "memória" e contexto a modelos de IA</h3>
+      <h3 class="curio-title">Fine-tuning vs. RAG: quando ensinar o modelo e quando dar contexto</h3>
       <p class="curio-text">
-        <strong>RAG (Retrieval-Augmented Generation)</strong> é uma técnica que conecta um modelo de linguagem (LLM)
-        a uma base de conhecimento externa. Em vez de depender só do que o modelo "aprendeu" no treinamento,
-        o sistema primeiro <strong>busca (retrieval)</strong> trechos relevantes de documentos — usando
-        <em>embeddings</em> e um banco de dados vetorial — e injeta esse contexto no prompt antes de
-        <strong>gerar (generation)</strong> a resposta.
+        Ao adaptar um <strong>LLM (Large Language Model)</strong> ao seu domínio, existem duas estratégias
+        complementares. No <strong>fine-tuning</strong>, você continua o treinamento do modelo com exemplos
+        rotulados do seu contexto, ajustando os <em>pesos</em> da rede — ideal para incorporar
+        <strong>comportamento, tom e formato</strong> de resposta consistentes (ex.: seguir um padrão de
+        laudo técnico).
       </p>
       <p class="curio-text">
-        Na prática, isso reduz "alucinações", mantém as respostas atualizadas sem re-treinar o modelo e
-        permite que a IA responda com base nos <strong>seus próprios dados</strong> (procedimentos, manuais,
-        históricos de processo). É a base de assistentes internos que respondem sobre documentação técnica
-        da empresa. 💡
+        Já o <strong>RAG (Retrieval-Augmented Generation)</strong> não altera os pesos: ele
+        <strong>recupera</strong> trechos relevantes de uma base vetorial (via <em>embeddings</em>) e injeta
+        esse contexto no prompt em tempo de inferência — ideal para <strong>conhecimento factual e volátil</strong>
+        (procedimentos, manuais, dados de processo atualizados), sem re-treinar o modelo.
       </p>
-      <span class="curio-tip">Dica: combine RAG com dados de processo (ex.: PI System) para criar assistentes que explicam desvios operacionais em linguagem natural.</span>
+      <span class="curio-tip">Regra prática: fine-tuning muda <em>como</em> o modelo responde; RAG muda <em>com base em quê</em> ele responde. Em ambientes industriais, combinar os dois entrega assistentes precisos e sempre atualizados.</span>
     </div>
   </section>
 
