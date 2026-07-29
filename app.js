@@ -2,7 +2,7 @@
 // available:true  -> card com botão "Acessar trilha"
 // available:false -> card "Em breve"
 const trainings = [
-  { name:'Power Apps', icon:'⚡', desc:'Crie aplicativos low-code para automatizar processos do dia a dia.', level:'Intermediário', available:true, link:'#' },
+  { name:'Power Apps', icon:'⚡', desc:'Crie aplicativos low-code para automatizar processos do dia a dia.', level:'Intermediário', available:true, link:'https://syensqosa.sharepoint.com/sites/GBU%20PC-ITA-DIGITAL-OPS-LATAM/Material%20Treinamentos/Forms/AllItems.aspx?id=%2Fsites%2FGBU%20PC%2DITA%2DDIGITAL%2DOPS%2DLATAM%2FMaterial%20Treinamentos%2FV%C3%ADdeo%5FAulas%2FPowerApps&viewid=4fe91fed%2D9e40%2D4786%2D9642%2Dd7aed7b58204&npsAction=createList' },
   { name:'Seeq', icon:'📈', desc:'Análise avançada de dados de séries temporais industriais.', level:'Avançado', available:false },
   { name:'PI Vision', icon:'🖥️', desc:'Visualização de dados de processo em tempo real com dashboards.', level:'Intermediário', available:false },
   { name:'Power Automate', icon:'🔁', desc:'Automatize fluxos de trabalho e integre sistemas sem código.', level:'Iniciante', available:false },
@@ -45,7 +45,7 @@ function render(){
       <span class="badge ${t.level}">${t.level}</span>
       <div class="card-foot">
         ${t.available
-          ? `<a class="card-link" href="${t.link}">Acessar trilha →</a>`
+          ? `<a class="card-link" href="${t.link}" target="_blank" rel="noopener">Acessar trilha →</a>`
           : `<span class="soon-tag">Em breve</span>`}
       </div>
     </article>`).join('');
