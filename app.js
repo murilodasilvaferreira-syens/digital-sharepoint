@@ -2,7 +2,7 @@
 // available:true  -> card com botão "Acessar trilha"
 // available:false -> card "Em breve"
 const trainings = [
-  { name:'Power Apps', icon:'⚡', desc:'Crie aplicativos low-code para automatizar processos do dia a dia.', level:'Intermediário', available:true, link:'https://syensqosa.sharepoint.com/sites/GBU%20PC-ITA-DIGITAL-OPS-LATAM/Material%20Treinamentos/Forms/AllItems.aspx?id=%2Fsites%2FGBU%20PC%2DITA%2DDIGITAL%2DOPS%2DLATAM%2FMaterial%20Treinamentos%2FV%C3%ADdeo%5FAulas%2FPowerApps&viewid=4fe91fed%2D9e40%2D4786%2D9642%2Dd7aed7b58204&npsAction=createList' },
+  { name:'Power Apps', icon:'⚡', desc:'Crie aplicativos low-code para automatizar processos do dia a dia.', level:'Iniciante', available:true, link:'https://syensqosa.sharepoint.com/sites/shditatibamanutenodocumentosscop1findustrial/Material%20Treinamentos%20%20Digital/Forms/AllItems.aspx?id=%2Fsites%2Fshditatibamanutenodocumentosscop1findustrial%2FMaterial%20Treinamentos%20%20Digital%2FVideos%2FPowerApps%2FIntrodu%C3%A7%C3%A3o%20ao%20Power%20Apps&viewid=c1696bd6%2De80b%2D40c5%2D9f41%2D68d7c6eec059' },
   { name:'Seeq', icon:'📈', desc:'Análise avançada de dados de séries temporais industriais.', level:'Avançado', available:false },
   { name:'PI Vision', icon:'🖥️', desc:'Visualização de dados de processo em tempo real com dashboards.', level:'Intermediário', available:false },
   { name:'Power Automate', icon:'🔁', desc:'Automatize fluxos de trabalho e integre sistemas sem código.', level:'Iniciante', available:false },
