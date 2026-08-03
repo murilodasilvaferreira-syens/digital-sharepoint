@@ -13,6 +13,11 @@ const trainings = [
 // ==== Casos de sucesso ====
 const cases = [
   {
+    icon:'🔗', tool:'Data Engineering',
+    title:'Pipelines de dados automatizados com ETL',
+    desc:'Construção de pipelines de dados com ETL (Extract, Transform, Load) automatizado, integrando diferentes fontes de dados corporativas (como SAP) em um fluxo unificado. Os dados são extraídos, tratados e padronizados automaticamente e alimentam dashboards em Power BI, eliminando processos manuais, garantindo informações confiáveis e atualizadas, e gerando valor direto para a tomada de decisão do negócio.',
+  },
+  {
     icon:'⚡', tool:'Power Apps',
     title:'Digitalização de inspeções de campo',
     desc:'Substituição de checklists em papel por um app móvel que registra inspeções, fotos e assinaturas em tempo real, com dados sincronizados automaticamente para dashboards.',
@@ -22,6 +27,7 @@ const cases = [
     title:'Otimização de coluna de destilação via EDA',
     desc:'Análise exploratória de dados (EDA) sobre séries temporais das variáveis de processo que governam a destilação. Foram identificados padrões e correlações entre variáveis manipuladas e a qualidade de produto, revelando janelas operacionais ótimas e reduzindo a variabilidade do processo para maximizar pureza e eficiência energética.',
   },
+
 ];
 
 const grid = document.getElementById('cardsGrid');
